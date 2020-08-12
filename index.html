@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Elavator</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="buildingContainer">
+        <div class="floor floor_5">
+          <div class="elevatorPosition">
+            <div class="doorLeft"></div>
+            <div class="doorOpen"></div>
+            <div class="doorRight"></div>
+          </div>
+          <div class="controlButtonBuilding">
+            <button class="btn buttonDown" data-value="5"></button>
+          </div>
+        </div>
+        <div class="floor floor_4">
+          <div class="elevatorPosition">
+            <div class="doorLeft"></div>
+            <div class="doorOpen"></div>
+            <div class="doorRight"></div>
+          </div>
+          <div class="controlButtonBuilding">
+            <button class="btn buttonUp" data-value="4"></button>
+            <button class="btn buttonDown" data-value="4"></button>
+          </div>
+        </div>
+        <div class="floor floor_3">
+          <div class="elevatorPosition">
+            <div class="doorLeft"></div>
+            <div class="doorOpen"></div>
+            <div class="doorRight"></div>
+          </div>
+          <div class="controlButtonBuilding">
+            <button class="btn buttonUp" data-value="3"></button>
+            <button class="btn buttonDown" data-value="3"></button>
+          </div>
+        </div>
+        <div class="floor floor_2">
+          <div class="elevatorPosition">
+            <div class="doorLeft"></div>
+            <div class="doorOpen"></div>
+            <div class="doorRight"></div>
+          </div>
+          <div class="controlButtonBuilding">
+            <button class="btn buttonUp" data-value="2"></button>
+            <button class="btn buttonDown" data-value="2"></button>
+          </div>
+        </div>
+        <div class="floor floor_1">
+          <div class="elevatorPosition">
+            <div class="doorLeft"></div>
+            <div class="doorOpen"></div>
+            <div class="doorRight"></div>
+          </div>
+          <div class="controlButtonBuilding">
+            <button class="btn buttonUp" data-value="1"></button>
+          </div>
+        </div>
+      </div>
+      <div class="controlContainer">
+        <div class="timer" data-timer="0"></div>
+        <div class="screen"></div>
+        <div class="controlPanel">
+          <div class="controlButton"></div>
+          <div class="controlButton CB5" data-value="5">5</div>
+          <div class="controlButton CB4" data-value="4">4</div>
+          <div class="controlButton CB3" data-value="3">3</div>
+          <div class="controlButton CB2" data-value="2">2</div>
+          <div class="controlButton CB1" data-value="1">1</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <audio src="./audio/elevatorAudi.mp3"></audio>
+  <script src="app.js"></script>
+</body>
+
+</html>

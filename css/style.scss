@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  background-color: rgb(40, 82, 145);
+  min-height: 100vh;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .buildingContainer {
+      .floor {
+        position: relative;
+        width: 360px;
+        height: 140px;
+        border: 1px solid #000000;
+        background-color: #aaa;
+        .numberFloor{
+          height: 30px;
+          width: 40px;
+          position: absolute;
+          border: 1px solid #f10e0ef5;
+          z-index: 10;
+        }
+        .elevatorPosition {
+          margin: 0 auto;
+          width: 140px;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+        }
+        .elevatorPosition--active {
+          border-left: 1px solid #000;
+          border-right: 1px solid #000;
+          background-color: rgb(55, 209, 93);
+        }
+
+        .doorLeft {
+          width: 30px;
+          height: 100px;
+          border: 1px solid #000000;
+          background-color: rgb(148, 147, 147);
+        }
+        .doorOpen {
+          width: 0px;
+          height: 97px;
+          border-top: 1px solid #000;
+          background-color: rgb(238, 240, 158);
+          transition: 2s all ease;
+        }
+        .doorOpen--active {
+          width: 60px;
+        }
+        .doorRight {
+          width: 30px;
+          height: 100px;
+          border: 1px solid #000000;
+          background-color: rgb(148, 147, 147);
+        }
+
+        .controlButtonBuilding {
+          position: absolute;
+          right: 10%;
+          top: 50%;
+          z-index: 10;
+          height: 120px;
+          width: 60px;
+
+          .btn {
+            height: 30px;
+            width: 30px;
+            border: 0;
+            outline: 0;
+            &:active {
+              transform: scale(0.98);
+            }
+          }
+          .buttonUp {
+            clip-path: polygon(50% 0, 100% 100%, 0 100%);
+          }
+          .buttonDown {
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+          }
+          .button--active {
+            background-color: rgb(55, 209, 93);
+          }
+        }
+      }
+    }
+
+    .controlContainer {
+      font-family: "Orbitron", sans-serif;
+      width: 120px;
+      height: max-content;
+      margin-left: 30px;
+      padding-top: 5px;
+      background-image: url(../images/images.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: 0 3px 15px #000;
+      border-radius: 0 0 5px 5px;
+      position: relative;
+      .timer{
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 30px;
+        width: 50px;
+        border: 1px solid #000000;
+        border-bottom: 0;
+        border-radius: 5px 5px 0 0;
+        background-color: rgb(245, 222, 160);
+        z-index: 1;
+        color: rgb(243, 37, 19);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 7px;
+        font-size: 20px;
+      }
+      .screen {
+        width: 100px;
+        height: 50px;
+        border: 1px solid #000000;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        background-color: rgb(245, 222, 160);
+        color: rgb(247, 44, 8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        font-weight: 900;
+        border-radius: 5px;
+      }
+      .controlPanel {
+        height: 200px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        border: 1px solid #000000;
+
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        border-radius: 5px;
+        .controlButton {
+          width: 50px;
+          height: 50px;
+          background-color: rgb(245, 201, 82);
+          box-shadow: 0 2px 3px #000;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 2rem;
+          cursor: pointer;
+          &:first-child {
+            border: 0;
+            background-color: inherit;
+            box-shadow: none;
+          }
+          &:active {
+            transform: scale(0.98);
+          }
+        }
+        .CB1 {
+        }
+        .CB2 {
+        }
+        .CB3 {
+        }
+        .CB4 {
+        }
+        .CB5 {
+        }
+        .controlButton--active {
+          background-color: rgb(55, 209, 93);
+        }
+      }
+    }
+  }
+}
+
